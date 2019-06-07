@@ -15,6 +15,17 @@ $(document).ready(function() {
     $('.losses').text("Losses: " + losses)
     $('.scoreCrrnt').text("Your total score is: " + totalRN)
 
+    function reset(){
+        randomNum = Math.floor(Math.random()*101+19)
+        $('.targetNum').text("Target number: " + randomNum)
+        blue = Math.floor(Math.random()*11+1)
+        pink = Math.floor(Math.random()*11+1)
+        green = Math.floor(Math.random()*11+1)
+        purple = Math.floor(Math.random()*11+1)
+        totalRN = 0
+        $('.scoreCrrnt').text("Your total score is: " + totalRN)
+  } 
+
     function winRun() {
         wins++
         $('.wins').text("Wins: " + wins)
@@ -27,7 +38,7 @@ $(document).ready(function() {
         reset()
     }
 
-    $('.blueEgg').on('click', function() {
+    $('#blueEgg').on('click', function() {
         totalRN = totalRN + blue
         $('.scoreCrrnt').text("Your total score is: " + totalRN)
             if (totalRN == randomNum) {
@@ -36,7 +47,7 @@ $(document).ready(function() {
                 loseRun()
             }
     })
-    $('.pinkEgg').on('click', function() {
+    $('#pinkEgg').on('click', function() {
         totalRN = totalRN + pink
         $('.scoreCrrnt').text("Your total score is: " + totalRN)
             if (totalRN == randomNum) {
@@ -45,7 +56,7 @@ $(document).ready(function() {
                 loseRun()
             }
     })
-    $('.greenEgg').on('click', function() {
+    $('#greenEgg').on('click', function() {
         totalRN = totalRN + green
         $('.scoreCrrnt').text("Your total score is: " + totalRN)
             if (totalRN == randomNum) {
@@ -54,7 +65,7 @@ $(document).ready(function() {
                 loseRun()
             }
     })
-    $('.purpleEgg').on('click', function() {
+    $('#purpleEgg').on('click', function() {
         totalRN = totalRN + purple
         $('.scoreCrrnt').text("Your total score is: " + totalRN)
             if (totalRN == randomNum) {
